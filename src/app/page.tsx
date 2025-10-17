@@ -1,4 +1,4 @@
-use client
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -28,11 +28,11 @@ export default function Home() {
       defaultTextAnimation="entrance-slide"
       borderRadius="rounded"
     >
-      <div id="nav" data-section="nav">
+      <div id="nav" data-section="nav" className="scroll-mt-24">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "About", id: "about" },
-            { name: "Features", id: "features" },
+            { name: "Features", id: "feature" },
             { name: "Contact", id: "contact" }
           ]}
           brandName="Webild"
@@ -65,12 +65,12 @@ export default function Home() {
       <div id="feature" data-section="feature" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <FeatureCardTwo
-            title="Our Features"
-            description="Discover what makes us different"
-            features=[{
+            features={[
               { title: "Advanced Analytics", description: "Get detailed insights into performance", icon: Sparkles },
               { title: "User-Friendly Interface", description: "Designed with simplicity in mind", icon: CheckCircle }
             ]}
+            title="Our Features"
+            description="Discover what makes us different"
           />
         </div>
       </div>
